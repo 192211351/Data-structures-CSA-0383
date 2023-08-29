@@ -1,0 +1,30 @@
+#include<stdio.h>
+int insertion_sort (int arr[100],int n)
+{
+	int i,j,temp;
+	for(i=1;i<n;i++)
+	{
+		j=i;
+		while(j>0&&arr[j]<arr[j-1])
+	{
+			temp=arr[j-1];
+		arr[j-1]=arr[j];
+		arr[j]=temp;
+		j--;
+	}
+}
+}
+int main()
+{
+	int n,i,arr[100];
+	printf("enter the numbe:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		+scanf("%d",&arr[i]);
+	insertion_sort(arr,n);
+	for(i=0;i<n;i++)
+	{
+		printf("%d",arr[i]);
+	}
+	return 0;
+}
